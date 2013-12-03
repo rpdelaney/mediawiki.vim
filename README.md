@@ -6,6 +6,10 @@ Upstream
 ========
 Derived from https://en.wikipedia.org/wiki/Wikipedia:Text_editor_support
 
+Installation
+============
+Extract to $HOME/.vim/
+
 Disclaimer
 ==========
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
