@@ -130,10 +130,10 @@ sy match wikiSyntaxHLEndTag /<\/syntaxhighlight>/    contains=htmlEndTag
 " Note: Cannot use 'start="<pre>"rs=e', so still have the <pre> tag
 " highlighted correctly via separate sy-match. Unfortunately, this will
 " also highlight <pre> tags inside the preformatted region.
-sy region htmlPre    start="<pre>"                 end="<\/pre>"me=e-6    contains=htmlPreTag
-sy region wikiNowiki start="<nowiki>"              end="<\/nowiki>"me=e-9 contains=wikiNowikiTag
-sy region wikiSource start="<source\s\+[^>]\+>"         keepend end="<\/source>"me=e-9 contains=wikiSourceTag
-sy region wikiSyntaxHL start="<syntaxhighlight\s\+[^>]\+>" keepend end="<\/syntaxhighlight>"me=e-18 contains=wikiSyntaxHLTag
+sy region htmlPre       start="<pre>"                               end="<\/pre>"me=e-6               contains=htmlPreTag
+sy region wikiNowiki    start="<nowiki>"                            end="<\/nowiki>"me=e-9            contains=wikiNowikiTag
+sy region wikiSource    start="<source\s\+[^>]\+>"          keepend end="<\/source>"me=e-9            contains=wikiSourceTag
+sy region wikiSyntaxHL  start="<syntaxhighlight\s\+[^>]\+>" keepend end="<\/syntaxhighlight>"me=e-18  contains=wikiSyntaxHLTag
 
 sy include @TeX syntax/tex.vim
 sy region wikiTeX matchgroup=htmlTag start="<math>" end="<\/math>"  contains=@texMathZoneGroup,wikiNowiki,wikiNowikiEndTag
@@ -169,7 +169,6 @@ sy region wikiTemplate start="{{" end="}}" contains=wikiNowiki,wikiNowikiEndTag
 sy match wikiParaFormatChar /^[\:|\*|;|#]\+/
 sy match wikiParaFormatChar /^-----*/
 sy match wikiPre            /^\ .*$/         contains=wikiNowiki,wikiNowikiEndTag
-
 
 " HTML highlighting
 
@@ -280,7 +279,6 @@ HtmlHiLink wikiRef            htmlComment
 
 HtmlHiLink wikiSource         wikiPre
 HtmlHiLink wikiSyntaxHL       wikiPre
-
 
 let b:current_syntax = "html"
 
